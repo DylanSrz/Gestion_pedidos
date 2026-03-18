@@ -1,4 +1,4 @@
-from dictionary import clients
+from data_dictionary import clients
 
 def register_clients():
     while True:
