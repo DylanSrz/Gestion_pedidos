@@ -1,5 +1,4 @@
-from register_clients import *
-
+#
 pedidoscreados = {}
 
 def order_creator():
@@ -31,7 +30,7 @@ def order_creator():
 
     while third_counter != 1:
 
-        amount = int(input("ingrese la cantidad del producto: "))
+        amount = input("ingrese la cantidad del producto: ")
 
         if not amount.isdigit():
             print("No se aceptan valores alfabeticos")
@@ -43,7 +42,9 @@ def order_creator():
         "product": product,
         "amount": amount,
     }
-
-    total_order = product * amount
+#producto esta incorrecto pero se reemplazará cuando tenga el precio
+    total_order = product * int(amount)
 
     print(f"El valor total del pedido es: {total_order}")
+
+order_creator()
