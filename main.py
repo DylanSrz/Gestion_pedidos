@@ -8,8 +8,9 @@ from functions.check_orders import check_orders
 from functions.daily_income import daily_income
 from functions.final_report import final_report
 
+counter = 0
 
-while True:
+while counter != 1:
 
     deleteScreen()
     
@@ -37,6 +38,6 @@ while True:
         final_report(pedidos_creados, daily_profit)
         pauseScreen()
     elif option == "7":
-        break
+        counter = 1
 
 print("\nGracias por usar el sistema de gestión de pedidos. ¡Hasta luego!\n")
