@@ -1,4 +1,4 @@
-from data_dictionary import *
+from data import *
 
 
 def order_creator(producto):

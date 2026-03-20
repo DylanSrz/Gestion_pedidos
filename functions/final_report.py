@@ -1,6 +1,6 @@
 
 
-def final_report(pedidos_creados):
+def final_report(pedidos_creados, daily_profit):
     total_orders = 0
     total_income = 0
     print("\n ==== REPORTE FINAL DE LA JORNADA ====\n")
@@ -10,11 +10,7 @@ def final_report(pedidos_creados):
 
     print(f"Total de pedidos registrados: {total_orders}")
 
-    for user_id, orders in pedidos_creados.items():
-        for order_id, order_info in orders.items():
-            total_income += order_info['total_price']
-
-    print(f"Total de ingresos generados: {total_income}")
+    print(f"Total de ingresos generados: {daily_profit}")
 
     print("Pedidos agrupados por cliente:")
     for user_id, orders in pedidos_creados.items():

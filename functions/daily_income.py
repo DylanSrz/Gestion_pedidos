@@ -1,13 +1,14 @@
-from data_dictionary import *
+from data import *
 
 
 def daily_income(pedidos_creados):
-    global daily_income
-    daily_income = 0
+    
+    daily_profit = 0
 
     for user_id, orders in pedidos_creados.items():
         for order_id, order_info in orders.items():
-            daily_income += order_info['total_price']
+            daily_profit += order_info['total_price']
+    
+    return daily_profit 
 
-    print(f"\n El total de ingresos durante la jornada fue {daily_income}")
-    return daily_income
+
