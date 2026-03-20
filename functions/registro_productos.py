@@ -34,10 +34,4 @@ def register_producto():
     producto[product_name] = (product_id, product_name, unit_price)
 
     deleteScreen()
-    print("\n=== Registro de productos ===\n")
-
-    print(
-        f"\nSe realizo el siguiente registro:")
-    print(f" - id: {product_id}")
-    print(f" - nombre: {product_name}")
-    print(f" - precio: {unit_price}\n")
+    return producto[product_name]

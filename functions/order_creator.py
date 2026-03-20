@@ -1,4 +1,5 @@
 from data import *
+from functions.screen_controller import deleteScreen
 
 
 def order_creator(producto):
@@ -6,6 +7,10 @@ def order_creator(producto):
     first_counter = 0
     second_counter = 0
     third_counter = 0
+    
+    deleteScreen()
+
+    print("\n=== Creación de pedidos ===\n")
 
     while first_counter != 1:
 
@@ -42,7 +47,6 @@ def order_creator(producto):
             print("Cantidad no válida, try again")
             continue
         else:
-            print("\nPedido creado con éxito")
             third_counter = 1
 
         price = producto[product][2]
@@ -59,6 +63,5 @@ def order_creator(producto):
             "total_price": total_order
         }
 
-        print(f"El valor total del pedido es: {total_order}")
 
-    return pedidos_creados
+    return pedidos_creados, total_order
