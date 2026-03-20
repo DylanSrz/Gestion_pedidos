@@ -1,6 +1,6 @@
 
-def menu ():
-    
+def menu():
+
     menu = """
     ==== SISTEMA GESTION DE PEDIDOS ====
     
@@ -8,8 +8,11 @@ def menu ():
     2. Registrar productos
     3. Crear pedidos
     4. Consultar pedidos
-    5. Generar reportes
-    6. Salir
+    5. Consultar ingresos de la jornada
+    6. Generar reporte final
+    7. Salir
     """
     print(menu)
-      
+
+    option = input("¿Que deseas realizar hoy?: ")
+    return option
