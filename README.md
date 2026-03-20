@@ -19,12 +19,14 @@ This is a program that simulates an order management system, which records and p
 4. Open the terminal from your desktop.
 
 5. Run the following command to clone the repository:
+   
+   * git clone https://github.com/DylanSrz/Gestion_pedidos.git
 
-6. check your screen and verify that it has been dowloaded to your  desktop
+7. check your screen and verify that it has been dowloaded to your  desktop
 
-7. Open the project folder in Visual Studio Code.
+8. Open the project folder in Visual Studio Code.
 
-8. Run the main file (main.py) from the editor or the integrated terminal.
+9. Run the main file (main.py) from the editor or the integrated terminal.
 
 ## Code Structure:
 
