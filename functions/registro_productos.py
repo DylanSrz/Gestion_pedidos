@@ -1,14 +1,19 @@
-from data_dictionary import producto
+from data import producto
+from functions.screen_controller import deleteScreen, pauseScreen
 
 
 def register_producto():
+
+    deleteScreen()
+
+    print("\n=== Registro de productos ===\n")
 
     while True:
         try:
             product_id = (input("\nIngrese el id del producto: "))
             break
         except:
-            print("Error: debe ser un número.")
+            print("\nError: debe ser un número.")
 
     while True:
         product_name = input(
@@ -16,16 +21,17 @@ def register_producto():
         if product_name.replace(" ", "").isalpha():
             break
         else:
-            print("Error: solo se permiten letras.")
-
+            print("Error: solo se permiten letras.\n")
+            
     while True:
         try:
             unit_price = float(input("Ingrese el precio del producto: "))
             break
         except:
-            print("Error: debe ser un número.")
+            print("Error: debe ser un número.\n")
+
 
     producto[product_name] = (product_id, product_name, unit_price)
 
-    print(
-        f"\nSe realizo el siguiente registro: id: {product_id}, nombre: {product_name}, precio: {unit_price}")
+    deleteScreen()
+    return producto[product_name]
