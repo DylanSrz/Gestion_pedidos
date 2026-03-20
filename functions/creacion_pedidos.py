@@ -1,6 +1,5 @@
-from register_clients import *
+from data_dictionary import *
 
-pedidoscreados = {}
 
 def order_creator():
 
@@ -10,10 +9,17 @@ def order_creator():
 
     while first_counter != 1:
 
-        client = input("ingrese su nombre: ")
-
-        if not client.replace(" ","").isalpha():
+        id = input("Ingrese su ID: ")
+        
+        if not id.replace(" ","").isalpha():
             continue
+        
+        if not id in clients:
+            print("ID no existe")
+            print("Try again")
+            print("")
+            continue
+        
 
         else:
             first_counter = 1
@@ -39,7 +45,7 @@ def order_creator():
         else:
             third_counter = 1
 
-    pedidoscreados[client]={
+    pedidos_creados[client]={
         "product": product,
         "amount": amount,
     }
